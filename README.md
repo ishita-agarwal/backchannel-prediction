@@ -25,7 +25,11 @@ Steps:
 3. default-metric/logistic_regression.py, default-metric/logistic_regression_kfold.py (classifier with default evaluation)
 4. ux-metric/logistic_regression_ux.py, default-metric/logistic_regression_ux_kfold.py (classifier with custom user experience evaluation)
 
-This assumes embeddings for conversations are already generated and PCA has been applied on them to create a smaller (50) dimension embedding.
+The above steps assumes embeddings for conversations are already generated and PCA has been applied on them to create a smaller (50) dimension embedding.
+
+# Generating embeddings
+Script to get RoBERTa embeddings: get_embeddings.py - it uses CUDA and can be run on GPU.
+
 Embeddings are created before pre_classifier.py is run.
 To run PCA on embeddings,
 1. pre_pca.py
