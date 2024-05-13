@@ -6,8 +6,8 @@ import os
 import sys
 import pickle
 
-entire_backbiter_dataset = pd.read_csv('data/backbiter.csv')
-entire_audiophile_dataset = pd.read_csv('data/audiophile.csv')
+entire_backbiter_dataset = pd.read_csv('/data/backbiter.csv')
+entire_audiophile_dataset = pd.read_csv('/data/audiophile.csv')
 
 start_conv_index = 1
 max_conv_id = 1536
@@ -17,7 +17,7 @@ for conversation_id in range(start_conv_index, max_conv_id+1):
     if conversation_id in [159, 1230]:
       continue
     print("Generating features for conversation ID ", conversation_id)
-    directory = f'data/features'
+    directory = f'/data/features'
     backbiter_conversation_df = entire_backbiter_dataset[entire_backbiter_dataset['conversation_id'] == conversation_id].sort_values(by='turn_id')
     audiophile_conversation_df = entire_audiophile_dataset[entire_audiophile_dataset['conversation_id'] == conversation_id].sort_values(by='turn_id')
 
