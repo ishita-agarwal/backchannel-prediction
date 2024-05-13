@@ -3,7 +3,7 @@ import pickle
 import numpy as np
 
 # Load the feature matrix from the pickle file
-with open('/Users/ishitaagarwal/Documents/Embeddings/final/src/data/classifier_input_ux/feature_matrix.pkl', 'rb') as f:
+with open('/final/src/data/classifier_input_ux/feature_matrix.pkl', 'rb') as f:
     feature_matrix = pickle.load(f)
 
 # Assuming the last column is the label and the previous columns include feature data and embedding
@@ -22,7 +22,7 @@ column_names = ['num_words_spoken_so_far', 'num_words_since_last_bc', 'num_bc_so
 df = pd.DataFrame(feature_matrix, columns=column_names)
 
 # Save to CSV
-csv_file_path = '/Users/ishitaagarwal/Documents/Embeddings/final/src/data/classifier_input_ux/test/feature_matrix_no_embeddings_conv_1.csv'
+csv_file_path = '/final/src/data/classifier_input_ux/test/feature_matrix_no_embeddings_conv_1.csv'
 df.to_csv(csv_file_path, index=False)
 
 print(f"Feature matrix without embeddings saved to CSV at {csv_file_path}")

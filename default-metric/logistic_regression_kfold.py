@@ -1,4 +1,3 @@
-import torch
 import torch.nn as nn
 import torch.optim as optim
 from sklearn.datasets import load_iris
@@ -18,7 +17,7 @@ from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import GroupShuffleSplit
 import pandas as pd
 
-with open('/Users/ishitaagarwal/Documents/Embeddings/final/src/data/classifier_input_ux/feature_matrix.pkl', 'rb') as f:
+with open('/final/src/data/classifier_input_ux/feature_matrix.pkl', 'rb') as f:
     features = pickle.load(f)
 
 # Function to adjust threshold

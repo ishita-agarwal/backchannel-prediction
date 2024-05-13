@@ -3,7 +3,7 @@ import numpy as np
 import pickle
 
 # Directory where the pickle files are stored
-directory = f'/Users/ishitaagarwal/Documents/Embeddings/final/src/data/features'
+directory = f'/final/src/data/features'
 conversation_id = '1'
 
 # List of feature names stored in pickle files

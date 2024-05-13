@@ -1,4 +1,3 @@
-import pickle
 
 def custom_accuracy_metric(df):
     # Initialize counters
@@ -88,27 +87,3 @@ def calculate_f1_score(TP, FP, TN, FN):
     # Calculate F1 score
     f1_score = 2 * (precision * recall) / (precision + recall) if (precision + recall) > 0 else 0
     return precision, recall, f1_score
-
-# with open('/Users/ishitaagarwal/Documents/Embeddings/final/src/data/prediction_ux/predictions_with_ids.pkl', 'rb') as f:
-#     predictions_df = pickle.load(f)
-# # print(predictions_df['conversation_ids'].unique())
-# # predictions_df = predictions_df[predictions_df['conversation_ids'] == 16]
-
-# # Calculate the custom metric
-# TP, FP, TN, FN, custom_accuracy = custom_accuracy_metric(predictions_df)
-# precision, recall, f1 = calculate_f1_score(TP, FP, TN, FN)
-# print("Custom Accuracy:", custom_accuracy)
-# print(f"Precision: {precision}, Recall: {recall}, F1 Score: {f1}")
-
-
-
-
-# # Filter rows where conversation_ids equals 1
-# filtered_data = predictions[predictions['conversation_ids'] == 16]
-# print(filtered_data.shape)
-# # # Save the filtered data to a CSV file
-# filtered_data.to_csv('/Users/ishitaagarwal/Documents/Embeddings/final/src/data/prediction_ux/test/prediction_conv_16.csv', index=False)
-
-
-# TODO - work on the custom accuracy metric
-

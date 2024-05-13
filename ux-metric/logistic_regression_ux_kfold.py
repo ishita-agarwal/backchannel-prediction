@@ -18,7 +18,7 @@ from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import GroupShuffleSplit
 import pandas as pd
 from prediction_analysis_vectorized import preprocess_data, calculate_custom_metrics, calculate_f1_score
-with open('/Users/ishitaagarwal/Documents/Embeddings/final/src/data/classifier_input_ux/feature_matrix.pkl', 'rb') as f:
+with open('/final/src/data/classifier_input_ux/feature_matrix.pkl', 'rb') as f:
     features = pickle.load(f)
 
 # Function to adjust threshold

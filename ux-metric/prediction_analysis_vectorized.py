@@ -1,5 +1,4 @@
 import pandas as pd
-import pickle
 
 def preprocess_data(df):
     # Ensure the DataFrame is sorted properly

@@ -17,9 +17,8 @@ from sklearn.model_selection import KFold
 from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import GroupShuffleSplit
 import pandas as pd
-# from prediction_analysis import custom_accuracy_metric, calculate_f1_score
 from prediction_analysis_vectorized import preprocess_data, calculate_custom_metrics, calculate_f1_score
-with open('/Users/ishitaagarwal/Documents/Embeddings/final/src/data/classifier_input_ux/feature_matrix.pkl', 'rb') as f:
+with open('/final/src/data/classifier_input_ux/feature_matrix.pkl', 'rb') as f:
     features = pickle.load(f)
 
 # Separate 'conversation_ids' and 'label' from the features
@@ -71,7 +70,7 @@ predictions_df = pd.DataFrame({
     'true_label': y_test_reset
 })
 
-predictions_df.to_pickle('/Users/ishitaagarwal/Documents/Embeddings/final/src/data/prediction_ux/predictions_with_ids.pkl')
+predictions_df.to_pickle('/final/src/data/prediction_ux/predictions_with_ids.pkl')
 predictions_df = preprocess_data(predictions_df)
 # Evaluate classification report
 
